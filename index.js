@@ -1,4 +1,3 @@
-let clock = document.getElementById("clock")
 
 function updateClock(){
     const now = new Date()
@@ -8,7 +7,7 @@ function updateClock(){
     hours = hours.toString().padStart(2,0)
     const minutes = now.getMinutes().toString().padStart(2,0)
     const seconds = now.getSeconds().toString().padStart(2,0)
-    clock.textContent = `${hours}:${minutes}:${seconds} ${meridiem}`
+    document.getElementById("clock").textContent = `${hours}:${minutes}:${seconds} ${meridiem}`
 }
 
 updateClock()
